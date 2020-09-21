@@ -1,0 +1,43 @@
+.carousel {
+  position: relative;
+  z-index: -1;
+  width: 100%;
+
+  &__slide {
+     display: none;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.prev,
+.next {
+   display: inline;
+   cursor: pointer;
+   position: absolute;
+   top: 50%;
+   width: auto;
+   padding: 1.6rem;
+   user-select: none;
+}
+
+.prev {
+   margin-left: 9rem;
+}
+
+.next {
+   right: 0;
+   margin-right: 9rem;
+}
+
+.prev:hover, .next:hover {
+   background-color: rgba(0,0,0,0.8);
+ }
+
+ .chevron {
+    display: inline-block;
+ }

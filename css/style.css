@@ -14,8 +14,7 @@ body {
   font-weight: 400; }
 
 .header {
-  background-color: rgba(39, 39, 39, 0.8);
-  height: 12rem; }
+  background-color: rgba(39, 39, 39, 0.8); }
 
 .logo {
   flex: 0 0 60%; }
@@ -23,14 +22,67 @@ body {
     max-width: 16.4rem;
     width: 100%; }
 
+.position__element {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  width: 6rem;
+  height: 6rem;
+  background-color: #F07C79;
+  text-align: center;
+  line-height: 6rem; }
+
+.carousel {
+  position: relative;
+  z-index: -1;
+  width: 100%; }
+  .carousel__slide {
+    display: none; }
+  .carousel__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+
+.prev,
+.next {
+  display: inline;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 1.6rem;
+  user-select: none; }
+
+.prev {
+  margin-left: 9rem; }
+
+.next {
+  right: 0;
+  margin-right: 9rem; }
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8); }
+
+.chevron {
+  display: inline-block; }
+
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; }
+
 .container {
+  position: relative;
   max-width: 144rem;
   margin: auto; }
 
 .header {
+  height: 12rem;
   max-width: 144rem;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  z-index: 10; }
   .header__box {
     display: flex;
     justify-content: space-between;
@@ -39,6 +91,10 @@ body {
     width: 100%; }
 
 .navigation {
+  position: -webkit-sticky;
+  /* Safari */
+  position: sticky;
+  top: 0;
   flex: 1; }
   .navigation__list {
     font-size: 2rem;

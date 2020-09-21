@@ -1,0 +1,14 @@
+
+.position {
+
+   &__element {
+     font-size: 2rem;
+     font-weight: 700;
+     color: white;
+     width: 6rem;
+     height: 6rem;
+     background-color: $color-rosered;
+     text-align: center;
+     line-height: 6rem;
+   }
+}

@@ -1,12 +1,15 @@
 .container {
+   position: relative;
    max-width: 144rem;
    margin: auto;
 }
 
 .header {
+   height: 12rem;
    max-width: 144rem;
    display: flex;
    justify-content: center;
+   z-index: 10;
 
    &__box{
       display: flex;
@@ -15,4 +18,4 @@
       max-width: 132rem;
       width: 100%; 
    }
-}
+} 
