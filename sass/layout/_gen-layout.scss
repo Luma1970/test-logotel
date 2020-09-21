@@ -1,0 +1,18 @@
+.container {
+   max-width: 144rem;
+   margin: auto;
+}
+
+.header {
+   max-width: 144rem;
+   display: flex;
+   justify-content: center;
+
+   &__box{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 132rem;
+      width: 100%; 
+   }
+}

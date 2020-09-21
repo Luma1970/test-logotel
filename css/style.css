@@ -10,9 +10,45 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Mono", monospace;
   font-weight: 400; }
+
+.header {
+  background-color: rgba(39, 39, 39, 0.8);
+  height: 12rem; }
+
+.logo {
+  flex: 0 0 60%; }
+  .logo__image {
+    max-width: 16.4rem;
+    width: 100%; }
 
 .container {
   max-width: 144rem;
   margin: auto; }
+
+.header {
+  max-width: 144rem;
+  display: flex;
+  justify-content: center; }
+  .header__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 132rem;
+    width: 100%; }
+
+.navigation {
+  flex: 1; }
+  .navigation__list {
+    font-size: 2rem;
+    font-weight: 500;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center; }
+  .navigation__item:not(:last-child) {
+    padding-right: 5rem; }
+  .navigation__link {
+    color: white;
+    text-decoration: none; }

@@ -1,5 +1,8 @@
+@import "abstracts/variables";
+
 @import "base/base";
 
 @import "components/_header";
 
-@import "layout/layout";
+@import "layout/gen-layout";
+@import "layout/navigation";
