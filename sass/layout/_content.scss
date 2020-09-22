@@ -4,3 +4,15 @@
    left: 0;
    width: 100%;
 }
+
+.position-box {
+   position: absolute;
+   bottom: 50%;
+}
+
+.slider-description {
+   position: absolute;
+   top: 50%;
+   right: 50%;
+   transform: translate(0, -50%);
+}

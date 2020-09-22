@@ -32,39 +32,43 @@ body {
   text-align: center;
   line-height: 6rem; }
 
-.carousel {
-  position: relative;
-  z-index: -1;
-  width: 100%; }
-  .carousel__slide {
-    display: none; }
-  .carousel__image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; }
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 2.849rem;
+  height: 4.566rem;
+  margin-top: 8rem; }
 
-.prev,
-.next {
-  display: inline;
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 1.6rem;
-  user-select: none; }
+.carousel-control-prev-icon {
+  background-image: url("../img/chevron sinistra.svg"); }
 
-.prev {
-  margin-left: 9rem; }
+.carousel-control-next-icon {
+  background-image: url("../img/chevron destra.svg"); }
 
-.next {
-  right: 0;
-  margin-right: 9rem; }
+.carousel-control-prev,
+.carousel-control-next {
+  opacity: 1;
+  transition: all 0s ease 0s; }
 
-.prev:hover, .next:hover {
-  background-color: rgba(0, 0, 0, 0.8); }
-
-.chevron {
-  display: inline-block; }
+.slider-description {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  flex-direction: column;
+  color: white;
+  text-align: left;
+  width: 54.7rem;
+  height: 50rem; }
+  .slider-description__title {
+    flex: 0 0 70%;
+    margin-bottom: 0;
+    font-weight: 700;
+    font-stretch: semi-condensed;
+    font-size: 6rem;
+    line-height: 8rem; }
+  .slider-description__text {
+    font-weight: 400;
+    font-size: 2rem;
+    flex: 0 0 30%; }
 
 .content {
   position: absolute;
@@ -72,14 +76,27 @@ body {
   left: 0;
   width: 100%; }
 
+.position-box {
+  position: absolute;
+  bottom: 50%; }
+
+.slider-description {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(0, -50%); }
+
 .container {
   position: relative;
   max-width: 144rem;
   margin: auto; }
 
 .header {
+  position: fixed;
   height: 12rem;
   max-width: 144rem;
+  width: 100%;
+  margin-left: -15px;
   display: flex;
   justify-content: center;
   z-index: 10; }
@@ -91,10 +108,6 @@ body {
     width: 100%; }
 
 .navigation {
-  position: -webkit-sticky;
-  /* Safari */
-  position: sticky;
-  top: 0;
   flex: 1; }
   .navigation__list {
     font-size: 2rem;
