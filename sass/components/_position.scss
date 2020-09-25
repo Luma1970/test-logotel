@@ -7,8 +7,12 @@
      color: white;
      width: 6rem;
      height: 6rem;
-     background-color: $color-rosered;
+     background-color: rgba(#974744, 0.5);
      text-align: center;
      line-height: 6rem;
+
+     &--active {
+      background-color: $color-rosered;
+     }
    }
 }
