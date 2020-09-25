@@ -1,0 +1,47 @@
+body {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 400;
+  background-color: $color-gray-light;
+}
+
+.heading__primary {
+  font-weight: 700;
+  font-stretch: semi-condensed;
+  font-size: 6rem;
+  line-height: 8rem;
+
+  @include respond(phone) {
+    font-size: 2.7rem;
+    line-height: 3.5rem;
+    max-width: 40rem;
+  }
+
+  &--red {
+    color: $color-feature-title;
+  }
+
+  &--top {
+    text-align: right;
+    padding-right: 7rem;
+
+    @include respond(phone) {
+      padding-right: 4rem;
+    }
+  }
+
+  &--bottom {
+    text-align: left;
+  }
+}
+
+.heading-tertiary {
+  color: $color-feature-title;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3rem;
+
+  @include respond(phone) {
+    font-size: 2.3rem;
+    line-height: 2.8rem;
+  }
+}

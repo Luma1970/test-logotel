@@ -1,12 +1,16 @@
 .header {
-   background-color: rgba($color-primary, 0.8);
+  background-color: rgba($color-primary, 0.8);
 }
 
 .logo {
-   flex: 0 0 60%;
+  flex: 0 0 60%;
 
-   &__image {
-   max-width: 16.4rem;
-   width: 100%;
-   }
+  &__image {
+    max-width: 16.4rem;
+    width: 100%;
+
+    @include respond(phone) {
+       max-width: 14rem;
+    }
+  }
 }

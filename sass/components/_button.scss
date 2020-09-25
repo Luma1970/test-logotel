@@ -1,0 +1,36 @@
+.btn {
+  font-family: $font-alt;
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: white;
+  padding: 1.9rem 1.8rem 1.7rem 1.9rem;
+  border-radius: 16px;
+
+  @include respond(phone) {
+    font-size: 1.7rem;
+    padding: 1rem 1.5rem;
+  }
+
+  &--slider {
+    position: absolute;
+    bottom: 7.7rem;
+    left: 16.3rem;
+
+    @include respond(phone) {
+      left: 3.2rem;
+    }
+  }
+
+  &--red {
+    background-color: $color-rosered;
+  }
+
+  &--giallo {
+    background-color: $color-tab-gialla;
+  }
+
+  &--turchese {
+    background-color: $color-tab-turchese;
+  }
+}

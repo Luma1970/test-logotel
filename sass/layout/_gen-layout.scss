@@ -1,7 +1,8 @@
-.container {
+.general-container {
    position: relative;
    max-width: 144rem;
    margin: auto;
+   background-color: white;
 }
 
 .header {
@@ -9,10 +10,13 @@
    height: 12rem;
    max-width: 144rem;
    width: 100%;
-   margin-left: -15px;
    display: flex;
    justify-content: center;
    z-index: 10;
+
+   @include respond(phone) {
+      height: 7rem;
+   }
 
    &__box{
       display: flex;
@@ -21,4 +25,31 @@
       max-width: 132rem;
       width: 100%; 
    }
+
+   &__scrolling {
+      height: 8rem;
+
+      @include respond(phone) {
+         height: 7rem;
+      }
+   }
 } 
+
+.section-news {
+   padding: 5.9rem;
+   padding-bottom: 0;
+
+   @include respond(phone) {
+      padding: 4rem;
+   }
+}
+
+.section-tab {
+   background-image: url("../img/grafica sfondo.png");
+   background-repeat: no-repeat;
+   background-position:center bottom;
+
+   @include respond(phone) {
+      background-size: contain;
+   }
+}

@@ -1,0 +1,72 @@
+.timeline {
+
+   &__header {
+      width: 100%;
+      height: 55.6rem;
+
+      @include respond(phone) {
+         height: 30rem;
+      }
+
+      &--top {
+         background-image: url("../img/onda-bianco-grigio.png");
+         margin-top: -8rem;
+
+         @include respond(phone) {
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-top: -3rem;
+         }
+      }
+
+      &--bottom {
+         background-image: url("../img/onda-grigio-bianco.png");
+         position: relative;
+
+         @include respond(phone) {
+            background-size: contain;
+            background-repeat: no-repeat;
+         }
+      }
+   }
+   &__title {
+      max-width: 87.3rem;
+
+      &--top {
+         float: right;
+         margin-top: 11.2rem;
+
+         @include respond(phone) {
+            margin-top: 3rem;
+         }
+      }
+
+      &--bottom {
+         position: absolute;
+         bottom: 5.21rem;
+         left: 5.9rem;
+
+         @include respond(phone) {
+            bottom: 10rem;
+            left: 4rem;            
+         }
+
+      }
+
+      &::after {
+         content: "";
+         display: table;
+         clear: both;
+      }
+   }
+
+   &__percorso {
+      height: 70rem;
+      background-image: linear-gradient(180deg, rgba(39, 39, 39, 1), rgba(70, 70, 70, 1));
+      margin-top: -1px;
+
+      @include respond(phone) {
+         margin-top: -10rem;
+      } 
+   }
+}

@@ -1,13 +1,10 @@
-.content {
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 100%;
-}
-
 .position-box {
    position: absolute;
    bottom: 50%;
+
+   @include respond(phone) {
+      display: none;
+   }
 }
 
 .slider-description {
@@ -15,4 +12,8 @@
    top: 50%;
    right: 50%;
    transform: translate(0, -50%);
+
+   @include respond(phone) {
+      display: none;
+   }
 }

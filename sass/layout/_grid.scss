@@ -1,0 +1,43 @@
+.myrow {
+   max-width: $grid-width;
+   margin: 0 auto;
+
+   @include respond(phone) {
+      max-width: 50rem;
+   }
+
+   [class^="col-"] {
+      float: left;
+
+      &:not(:last-child) {
+         margin-right: $gutter-horiz;
+
+         @include respond(phone) {
+            margin-right: 0;
+            margin-bottom: $gutter-vert;
+         }
+      }
+
+      @include respond(phone) {
+         width: 100% !important;
+      }
+   }
+
+   &::after {
+      content: "";
+      display: table;
+      clear: both;
+   }
+
+   .col-1-of-3 {
+      width: calc((100% - 2 * #{$gutter-horiz}) / 3);
+   }
+
+   &--tab {
+      padding-bottom: 14.5rem;
+
+      @include respond(phone) {
+         padding: 0 1.5rem 9rem 1.5rem;
+      }
+   }
+} 

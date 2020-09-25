@@ -1,11 +1,21 @@
 @import "abstracts/variables";
+@import "abstracts/mixins";
 
 @import "base/base";
+@import "base/typography";
 
+@import "components/button";
+@import "components/_circle";
+@import "components/feature-box";
 @import "components/_header";
+@import "components/icone-social";
 @import "components/position";
 @import "components/slider";
+@import "components/tab";
 
-@import "layout/content";
+@import "layout/carousel";
+@import "layout/footer";
 @import "layout/gen-layout";
+@import "layout/grid";
 @import "layout/navigation";
+@import "layout/timeline";

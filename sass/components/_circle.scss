@@ -1,0 +1,23 @@
+.circle {
+   width: 23.4rem;
+   height: 23.4rem;
+   border-radius: 50%;
+   margin: auto;
+
+   @include respond(phone) {
+      width: 19.89rem;
+      height: 19.89rem;
+   }
+
+   &--red {
+      background-color: $color-feature-title;
+   }
+
+   &--giallo {
+      background-color: $color-tab-gialla;
+   }
+
+   &--turchese {
+      background-color: $color-tab-turchese;
+   } 
+}

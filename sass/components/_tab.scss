@@ -1,0 +1,101 @@
+.tab {
+  background-color: white;
+  height: 65.4rem;
+  border-radius: 20px;
+  box-shadow: 0 0 2rem 1rem rgba(0, 0, 0, 0.1);
+  margin-top: 7.89px;
+  text-align: center;
+
+  @include respond(phone) {
+    height: 57rem;
+    box-shadow: 0 0 1rem 0.5rem rgba(0, 0, 0, 0.1);;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-family: $font-alt;
+    font-weight: 700;
+    font-size: 3.4rem;
+    padding-top: 3.3rem;
+    
+    @include respond(phone) {
+      font-size: 3rem;
+      padding-top: 3rem;
+    }
+
+    &--rosa {
+      color: $color-feature-title;
+    }
+
+    &--giallo {
+      color: $color-tab-gialla;
+    }
+
+    &--turchese {
+      color: $color-tab-turchese;
+    }
+  }
+
+  &__linea {
+     width: 34.7rem;
+     margin: auto;
+     margin-top: 1.7rem;
+     border: 2px solid;
+
+     &--rosa {
+      color: $color-feature-title;
+     }
+
+     &--gialla {
+      color: $color-tab-gialla;
+    }
+
+    &--turchese {
+      color: $color-tab-turchese;
+    }
+  }
+
+  &__illustrazione {
+    margin-top: 3.1rem;
+  }
+
+  &__image {
+
+    @include respond(phone){
+      width: 95%;
+    }
+
+    &--sveglia {
+      margin: 8px 15px 0 0;
+
+      @include respond(phone) {
+        margin-top: 6px;
+      }
+    }
+
+    &--target {
+      margin: 2px 8px 0 0;
+
+      @include respond(phone) {
+        margin-right: 4px;
+      }
+    }
+
+    &--razzo {
+      margin: 20px 7px 0 0;
+
+      @include respond(phone) {
+        margin-top: 12px;
+      }
+    }
+  }
+
+  &__text {
+    width: 31.5rem;
+    text-align: center;
+    margin: 3.4rem auto 2.4rem;
+    font-family: $font-alt;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+}

@@ -1,0 +1,5 @@
+@mixin respond($breakpoint) {
+   @if $breakpoint == phone {
+      @media only screen and (max-width: 48em) { @content }; // corrisponde a 768px
+   }
+}

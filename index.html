@@ -7,6 +7,7 @@
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
    <link rel="stylesheet" href="css/style.css">
@@ -15,26 +16,47 @@
 </head>
 
 <body>
-   <div class="container">
-      <header class="header">
+   <div class="general-container">
+      <header class="header" id="header">
          <div class="header__box">
             <div class="logo">
                <img src="img/LOGO BIANCO.svg" alt="lo:go" class="logo__image">
             </div>
 
-            <nav class="navigation">
-               <ul class="navigation__list">
-                  <li class="navigation__item"><a href="#" class="navigation__link">SLIDER</a></li>
-                  <li class="navigation__item"><a href="#" class="navigation__link">NEWS</a></li>
-                  <li class="navigation__item"><a href="#" class="navigation__link">PERCORSO</a></li>
-                  <li class="navigation__item"><a href="#" class="navigation__link">TAB</a></li>
-               </ul>
-            </nav>
+            <div class="navigation">
+               <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+
+               <label for="navi-toggle" class="navigation__button">
+                  <span class="navigation__icon">&nbsp;</span>
+               </label>
+
+               <div class="navigation__background">&nbsp;</div>
+
+               <nav class="navigation__nav">
+                  <ul class="navigation__list">
+                     <li class="navigation__item"><a href="#" class="navigation__link">SLIDER</a></li>
+                     <li class="navigation__item"><a href="#" class="navigation__link">NEWS</a></li>
+                     <li class="navigation__item"><a href="#" class="navigation__link">PERCORSO</a></li>
+                     <li class="navigation__item"><a href="#" class="navigation__link">TAB</a></li>
+                  </ul>
+               </nav>
+            </div>
          </div>
+
       </header>
 
-      <div class="content">
+      <main class="contenuto-principale">
+
+         <!-- INIZIO SLIDER IMMAGINI -->
          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+
+            <!-- NON MOSTRARE PALLINI SUL MENU -->
+            <ol class="carousel-indicators">
+               <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+               <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+               <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+               <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+             </ol>
             <div class="carousel-inner">
                <div class="carousel-item active">
                   <img src="img/slider-1.png" class="d-block w-100" alt="montagne">
@@ -58,53 +80,225 @@
                <span class="sr-only">Next</span>
             </a>
 
-<!-- RENDERE RESPONIVE LA DESCRIZIONE -->
+            <!--controllare lo slider con i pallini in mobile -->
             <div class="position-box">
-               <div class="position__element">1</div>
-               <div class="position__element">2</div>
-               <div class="position__element">3</div>
-               <div class="position__element">4</div>
+               <div class="position__element" data-slide-to="0">1</div>
+               <div class="position__element" data-slide-to="1">2</div>
+               <div class="position__element" data-slide-to="2">3</div>
+               <div class="position__element" data-slide-to="3">4</div>
             </div>
-
+            <!-- END -->
             <div class="slider-description">
-               <h1 class="slider-description__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h1>
+               <h1 class="heading__primary">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h1>
                <span class="slider-description__text">aliquam tempore odio recusandae dolores necessitatibus numquam
-                     expedita in asperiores voluptatum natus distinctio magnam harum.</span>
+                  expedita in asperiores voluptatum natus distinctio magnam harum.</span>
             </div>
+
+            <a href="#" class="btn btn--slider btn--red">call to action</a>
+
+            <div class="slider-description__mobile">
+               <h1 class="heading__primary">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h1>
+               <p class="slider-description__text--mobile">aliquam tempore odio recusandae dolores necessitatibus numquam
+                  expedita in asperiores voluptatum natus distinctio magnam harum.</p>
+               <a href="#" class="btn btn--slider btn--red">call to action</a>
+            </div>
+
          </div>
-      </div>
-<!-- END -->
 
-      <!-- 
-         
-         <a href="#" class="btn btn--red">call to action</a>
+         <!-- FINE SLIDER -->
 
+         <!-- INIZIO SEZIONE NEWS -->
+
+         <section class="section-news">
+            <div class="myrow">
+               <div class="col-1-of-3">
+                  <div class="feature-box">
+                     <div class="feature-box__start">
+                        <img src="img/news-1.png" alt="Ragazza capelli lunghi" class="feature-box__image">
+                        <div class="feature-box__description">
+                           <p class="feature-box__date">13.09.2020</p>
+                           <h3 class="heading-tertiary">Lorem ipsum dolor, sit amet consectetur</h3>
+                           <p class="feature-box__text">
+                              Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.. Ut
+                              wisi enim ad minim…
+                           </p>
+                        </div>
+                     </div>
+                     <!--
+                     <div class="feature-box__hover">
+                        <p class="feature-box__date--hover">13.09.2020</p>
+                        <h3 class="heading-tertiary--hover">No nummy nibh: euismod tin</h3>
+                        <p class="feature-box__text--hover">
+                           Eius nam quidem minus ab necessitatibus provident amet, impedit harum tempore quibusdam
+                        </p>
+                     </div>
 -->
 
+                  </div>
+               </div>
+
+               <div class="col-1-of-3">
+                  <div class="feature-box">
+                     <div class="feature-box__start">
+                        <img src="img/news-2.png" alt="Ragazzo cappello" class="feature-box__image">
+                        <div class="feature-box__description">
+                           <p class="feature-box__date">12.09.2020</p>
+                           <h3 class="heading-tertiary">Lorem ipsum dolor, sit amet consectetur</h3>
+                           <p class="feature-box__text">
+                              Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                              pariatur. Excepteur sint obcaecat cupidi...
+                           </p>
+                        </div>
+                     </div>
+
+                     <!--
+                     <div class="feature-box__hover">
+                        <p class="feature-box__date--hover">13.09.2020</p>
+                        <h3 class="heading-tertiary--hover">No nummy nibh: euismod tin</h3>
+                        <p class="feature-box__text--hover">
+                           Eius nam quidem minus ab necessitatibus provident amet, impedit harum tempore quibusdam
+                        </p>
+                     </div>
+-->
+                  </div>
+               </div>
+
+               <div class="col-1-of-3">
+                  <div class="feature-box">
+                     <div class="feature-box__start">
+                        <img src="img/news-3.png" alt="Ragazza caschetto" class="feature-box__image">
+                        <div class="feature-box__description">
+                           <p class="feature-box__date">11.09.2020</p>
+                           <h3 class="heading-tertiary">Lorem ipsum dolor, sit amet consectetur
+                           </h3>
+                           <p class="feature-box__text">
+                              Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit
+                              anim id est laborum sunt in culpa...
+                           </p>
+                        </div>
+
+                        <!--
+                     <div class="feature-box__hover">
+                        <p class="feature-box__date--hover">13.09.2020</p>
+                        <h3 class="heading-tertiary--hover">No nummy nibh: euismod tin</h3>
+                        <p class="feature-box__text--hover">
+                           Eius nam quidem minus ab necessitatibus provident amet, impedit harum tempore quibusdam
+                        </p>
+                     </div>
+-->
+                     </div>
+                  </div>
+               </div>
+
+            </div>
+         </section>
+
+         <!-- FINE NEWS -->
+
+         <!-- INIZIO TIMELINE -->
+
+         <section class="timeline">
+            <div class="timeline__header timeline__header--top">
+               <div class="timeline__title timeline__title--top">
+                  <h1 class="heading__primary heading__primary--red heading__primary--top">Sed diam nonummy nibh euismod
+                     tincidunt?</h1>
+               </div>
+            </div>
+
+            <div class="timeline__percorso">
+
+            </div>
+
+            <div class="timeline__header timeline__header--bottom">
+               <div class="timeline__title timeline__title--bottom">
+                  <h1 class="heading__primary heading__primary--red heading__primary--bottom">Lorem ipsum dolor sit amet
+                     consectetuer?</h1>
+               </div>
+            </div>
+         </section>
+
+         <!-- FINE TIMELINE-->
+
+         <!-- INIZIO TAB-->
+         <section class="section-tab">
+            <div class="myrow myrow--tab">
+               <div class="col-1-of-3">
+                  <div class="tab">
+                     <p class="tab__title tab__title--rosa">TAB ROSA</p>
+                     <hr class="tab__linea tab__linea--rosa">
+                     <div class="tab__illustrazione">
+                        <div class="circle circle--red">
+                           <img src="img/sveglia.png" alt="sveglia" class="tab__image tab__image--sveglia">
+                        </div>
+                     </div>
+                     <p class="tab__text">
+                        Erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci magna aliquam erat volutpat. Ut
+                        wisi enim ad minim veniam, quis nostrud exerci.
+                     </p>
+                     <a href="#" class="btn btn--red">call to action</a>
+                  </div>
+               </div>
+
+               <div class="col-1-of-3">
+                  <div class="tab">
+                     <p class="tab__title tab__title--giallo">TAB GIALLA</p>
+                     <hr class="tab__linea tab__linea--gialla">
+                     <div class="tab__illustrazione">
+                        <div class="circle circle--giallo">
+                           <img src="img/target.png" alt="bersaglio" class="tab__image tab__image--target">
+                        </div>
+                     </div>
+                     <p class="tab__text">
+                        Ut wisi enim ad minim veniam, quis nostrud exerci magna aliquam erat volutpat. Ut wisi enim ad
+                        minim veniam, quis nostrud exerci tation ullamcorper.
+                     </p>
+                     <a href="#" class="btn btn--giallo">call to action</a>
+                  </div>
+               </div>
+
+               <div class="col-1-of-3">
+                  <div class="tab">
+                     <p class="tab__title tab__title--turchese">TAB TURCHESE</p>
+                     <hr class="tab__linea tab__linea--turchese">
+                     <div class="tab__illustrazione">
+                        <div class="circle circle--turchese">
+                           <img src="img/razzo.png" alt="Ragazza capelli lunghi" class="tab__image tab__image--razzo">
+                        </div>
+                     </div>
+                     <p class="tab__text">
+                        Enim ad minim veniam, quis nostrud exerci tation ullamcorper. erat volutpat. Ut wisi enim ad
+                        minim veniam, quis nostrud exerci magna aliquam era.
+                     </p>
+                     <a href="#" class="btn btn--turchese">call to action</a>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- FINE TAB -->
+      </main>
+
+      <footer class="footer">
+         <div class="footer__legal">
+            <img src="img/LOGO BIANCO.svg" alt="logo" class="footer__logo">
+            <p class="footer__terms footer__terms--a">Terms & conditions | Privacy policy | Cookies policy | Copyrights
+               Notification</p>
+            <p class="footer__terms footer__terms--b">Copyright © 2020 Logotel. All rights reserved.</p>
+         </div>
+         <div class="footer__social">
+            <p class="footer__invito">seguici sui social</p>
+            <div class="icone-social">
+               <img src="img/FB.svg" alt="Facebook" class="icone-social__img">
+               <img src="img/TW.svg" alt="Twitter" class="icone-social__img">
+               <img src="img/IG.svg" alt="Instagram" class="icone-social__img">
+               <img src="img/LI.svg" alt="Linkedin" class="icone-social__img">
+               <img src="img/YT.svg" alt="Youtube" class="icone-social__img">
+            </div>
+         </div>
+      </footer>
 
    </div>
-
-   <main>
-      <section class="news">
-
-      </section>
-
-      <section class="timeline">
-
-      </section>
-
-      <section class="tab">
-
-      </section>
-
-   </main>
-
-   <footer class="footer">
-
-   </footer>
-
-   </div>
-   </div>
+   
+   <script src="scripts/app.js" type="text/javascript"></script>
 
    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
       integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -116,3 +310,5 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"></script>
 </body>
+
+</html>
